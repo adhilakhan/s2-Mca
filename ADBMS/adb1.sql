@@ -13,7 +13,7 @@ select * from employees INNER JOIN jobs on employees.job_id = jobs.job_id where 
 select * from employees where department_id=8;
 select * from Dept order by department_name desc;
 select * from employees where last_name like 'K%';
-select employee_id,first_name,last_name,hire_date from employees where hire_date between '1995-01-01' and '1997-12-31';
+select concat(first_name,last_name),hire_date from employees where hire_date between '1995-01-01' and '1997-12-31';
 select * from jobs where max_salary < 5000;
 select lower(email) from employees;
 select concat(first_name,last_name) as Name from employees where hire_date between '1995-01-01' and '1995-12-31';
@@ -22,3 +22,4 @@ INSERT INTO
  employees(employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) VALUES
  (207,'Paul','Newton','paul.newton@sqltutorial.org','515.123.9876','1999-06-07',1,8300.00,205,11);
 delete from Dept where department_name = "Shipping";
+select * from employees where dayname(hire_date)="Thursday";
