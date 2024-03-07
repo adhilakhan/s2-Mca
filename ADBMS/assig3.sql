@@ -51,8 +51,11 @@ select name,course.course_number,course_name,credit_hours,semester,years,grade f
 
 insert into Student values( "Jhonson",25,1,"MATH");
 
+
+
 Update student set class=2 where name="Smith";
 
 insert into Course values("Knowledge Engineering","CS4390",3,"CS");
 
 delete from student where name="Smith" and student_number=17; 
+create view student_view as select name from student where major="CS";
