@@ -59,3 +59,20 @@ insert into Course values("Knowledge Engineering","CS4390",3,"CS");
 
 delete from student where name="Smith" and student_number=17; 
 create view student_view as select name from student where major="CS";
+
+
+
+use university;
+call factorial(6,@f);
+select @f;
+
+use company;
+call getCountries;
+
+call OddEven(10);
+
+call grade(20);
+
+call Number(0);
+
+call day('2002-03-06');
